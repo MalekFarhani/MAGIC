@@ -1,0 +1,50 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "adding-two-number;adding-two-number",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Adding two number",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I add 2 and 5",
+            "match": {
+              "location": "features\\step_definitions\\my_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 260500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "The result should be 7",
+            "match": {
+              "location": "features\\step_definitions\\my_steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "adding-two-number",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Adding two number",
+    "tags": [],
+    "uri": "features\\test.feature"
+  }
+]
