@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js @cucumber/pretty-formatter features/test.feature"
+    "test": "cucumber-js @cucumber/pretty-formatter features/google.feature"
   },
   "author": "",
   "license": "ISC",
