@@ -35,7 +35,7 @@ Given('I visit google homepage', async () => {
     }
 );
 
-When ('I When I search for noly', async () => {
+When ('I search for noly', async () => {
         driver.findElement(By.xpath("//*[@id=\"authButton\"]/a")).click();
         driver.findElement(By.xpath("//*[@id=\"loginInput\"]")).sendKeys("khairi.benammar@gmail.com");// PRENOM //la méthode xpath avancée
         driver.findElement(By.xpath("//input[contains(@type,'password')]")).sendKeys("Mm98587052$$");
