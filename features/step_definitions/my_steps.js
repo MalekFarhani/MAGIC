@@ -1,10 +1,12 @@
 const {Given, When, Then, Before, After} = require('@cucumber/cucumber')
 const {expect} = require('chai');
 const { By, Builder} = require('selenium-webdriver');
+const {setDefaultTimeout} = require('@cucumber/cucumber');
+setDefaultTimeout(60 * 1000);
 
 
 
-/*
+
 When('I add {int} and {int}', function (int, int2)
 {
 
@@ -14,28 +16,30 @@ Then('The result should be {int}', function (int){
 
 
 });
-*/
+
+
+
 let driver = new Builder()
    .forBrowser('chrome')
    .build();
 //let driver
 
 //Before(function () {
-  //      driver = new webdriver.Builder().forBrowser('chrome').build();
-   // }
+  //      driver = new Builder().forBrowser('chrome').build();
+    //}
 //)
 
-//After(function () {
- //   driver.quit();
-//})
 
 Given('I visit google homepage', async () => {
-        await driver.get("https://www.google.com");
+        await driver.get("https://app.detente-croisiere.com/");
     }
 );
 
-When ('I When I search for Techverito', async () => {
-        await driver.findElement(By.name('q')).sendKeys('Techverito'+'\n')
+When ('I When I search for noly', async () => {
+        driver.findElement(By.xpath("//*[@id=\"authButton\"]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"loginInput\"]")).sendKeys("khairi.benammar@gmail.com");// PRENOM //la méthode xpath avancée
+        driver.findElement(By.xpath("//input[contains(@type,'password')]")).sendKeys("Mm98587052$$");
+        driver.findElement(By.xpath("//button[contains(@class,'formButton')]")).click();
     }
 );
 
@@ -46,3 +50,5 @@ Then ('I should see the results', async () => {
 //When(/^I search for Techverito$/, function () {
 
 //});
+
+
